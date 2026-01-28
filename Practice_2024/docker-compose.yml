@@ -4,9 +4,9 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_DB: your_db_name
-      POSTGRES_USER: your_db_user
-      POSTGRES_PASSWORD: your_db_password
+      POSTGRES_DB: vacancies_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
     volumes:
@@ -17,9 +17,9 @@ services:
     environment:
       DB_HOST: db
       DB_PORT: 5432
-      DB_NAME: your_db_name
-      DB_USER: your_db_user
-      DB_PASS: your_db_password
+      DB_NAME: vacancies_db
+      DB_USER: postgres
+      DB_PASS: postgres
     depends_on:
       - db
 
